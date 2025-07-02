@@ -9,14 +9,14 @@ from datetime import datetime
 from flask import Flask, render_template, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from PyPDF2 import PdfReader, PdfWriter, PdfMerger
+from pdf2docx import Converter
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['PROCESSED_FOLDER'] = 'processed'
-app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB limit
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'jpg', 'jpeg', 'png'}
 
-# Ensure folders exist
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(app.config['PROCESSED_FOLDER'], exist_ok=True)
 
@@ -120,7 +120,6 @@ def compress_pdf():
 
     original_size = os.path.getsize(input_path)
     new_size = os.path.getsize(output_path)
-
     shutil.rmtree(upload_dir)
 
     return jsonify({
@@ -162,7 +161,6 @@ def merge_pdf():
     merger.close()
 
     new_size = os.path.getsize(output_path)
-
     shutil.rmtree(upload_dir)
 
     return jsonify({
@@ -192,7 +190,6 @@ def split_pdf():
 
     input_path = os.path.join(upload_dir, pdf_files[0])
     original_size = os.path.getsize(input_path)
-
     zip_filename = f"split_{pdf_files[0].replace('.pdf', '')}.zip"
     zip_path = os.path.join(app.config['PROCESSED_FOLDER'], zip_filename)
 
@@ -264,7 +261,6 @@ def lock_pdf():
 
     original_size = os.path.getsize(input_path)
     new_size = os.path.getsize(output_path)
-
     shutil.rmtree(upload_dir)
 
     return jsonify({
@@ -272,6 +268,66 @@ def lock_pdf():
         'download_url': f'/download/{output_filename}',
         'original_size': original_size,
         'new_size': new_size
+    })
+
+@app.route('/api/convert', methods=['POST'])
+def convert_pdf():
+    data = request.json
+    token = data.get('token')
+    target_format = data.get('format', 'docx')  # 'docx' or 'jpg'
+
+    if not token or target_format not in ['docx', 'jpg']:
+        return jsonify({'success': False, 'message': 'Invalid token or format'}), 400
+
+    upload_dir = os.path.join(app.config['UPLOAD_FOLDER'], token)
+    if not os.path.exists(upload_dir):
+        return jsonify({'success': False, 'message': 'Invalid token'}), 400
+
+    pdf_files = [f for f in os.listdir(upload_dir) if f.lower().endswith('.pdf')]
+    if not pdf_files:
+        return jsonify({'success': False, 'message': 'No PDF file found'}), 400
+
+    input_path = os.path.join(upload_dir, pdf_files[0])
+
+    if target_format == 'docx':
+        output_filename = f"{pdf_files[0].replace('.pdf', '')}.docx"
+        output_path = os.path.join(app.config['PROCESSED_FOLDER'], output_filename)
+        try:
+            cv = Converter(input_path)
+            cv.convert(output_path, start=0, end=None)
+            cv.close()
+        except Exception as e:
+            return jsonify({'success': False, 'message': f'DOCX conversion failed: {str(e)}'}), 500
+
+    elif target_format == 'jpg':
+        output_folder = os.path.join(app.config['PROCESSED_FOLDER'], f"{token}_jpgs")
+        os.makedirs(output_folder, exist_ok=True)
+
+        try:
+            doc = fitz.open(input_path)
+            for i, page in enumerate(doc):
+                pix = page.get_pixmap(dpi=200)
+                jpg_path = os.path.join(output_folder, f"page_{i+1}.jpg")
+                pix.save(jpg_path)
+            doc.close()
+
+            zip_filename = f"{pdf_files[0].replace('.pdf', '')}_images.zip"
+            zip_path = os.path.join(app.config['PROCESSED_FOLDER'], zip_filename)
+            with zipfile.ZipFile(zip_path, 'w') as zipf:
+                for img_file in os.listdir(output_folder):
+                    zipf.write(os.path.join(output_folder, img_file), arcname=img_file)
+
+            output_path = zip_path
+
+        except Exception as e:
+            return jsonify({'success': False, 'message': f'JPG conversion failed: {str(e)}'}), 500
+
+    shutil.rmtree(upload_dir)
+
+    return jsonify({
+        'success': True,
+        'download_url': f'/download/{os.path.basename(output_path)}',
+        'message': f'PDF converted to {target_format.upper()} successfully.'
     })
 
 @app.route('/download/<filename>')
