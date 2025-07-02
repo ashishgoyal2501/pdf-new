@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFMaster Pro - Advanced PDF Tools</title>
+    <meta name="description" content="Free online PDF tools: Compress, merge, split, convert, and protect PDF files. 100% secure and browser-based.">
+    <meta name="keywords" content="pdf tools, compress pdf, merge pdf, split pdf, pdf to word, unlock pdf, pdf converter">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PDFMaster Pro - Advanced PDF Tools">
+    <meta property="og:description" content="Compress, merge, split, convert, and protect PDF files - 100% free and secure.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="PDFMaster Pro - Advanced PDF Tools">
+    <meta property="twitter:description" content="Compress, merge, split, convert, and protect PDF files - 100% free and secure.">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"></script>
+    
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span>PDFMaster Pro</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#tools">Tools</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#features">Features</a>
+                    <a href="#testimonials">Testimonials</a>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Advanced PDF Tools in Your Browser</h1>
+            <p>Compress, merge, split, convert, and protect PDF files with our free online tools. No installation required - 100% free and secure.</p>
+            <a href="#tools" class="btn btn-primary">Explore Tools</a>
+            <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+        </div>
+    </section>
+
+    <!-- AdSense Banner -->
+    <div class="ads-container">
+        <div class="container">
+            <div class="ad-box">Google AdSense Banner (728x90)</div>
+        </div>
+    </div>
+
+    <!-- Tools Section -->
+    <section id="tools" class="container">
+        <div class="section-title">
+            <h2>Powerful PDF Tools</h2>
+            <p>All the tools you need to work with PDF files, completely free</p>
+        </div>
+        
+        <div class="tools-grid">
+            <!-- Tool 1: Compress PDF -->
+            <div class="tool-card" data-tool="compress">
+                <div class="tool-icon">📦</div>
+                <div class="tool-content">
+                    <h3>Compress PDF</h3>
+                    <p>Reduce file size while optimizing for maximal PDF quality. Make large files smaller without losing quality.</p>
+                    <button class="btn btn-primary">Compress PDF</button>
+                </div>
+            </div>
+            
+            <!-- Tool 2: Merge PDF -->
+            <div class="tool-card" data-tool="merge">
+                <div class="tool-icon">🧩</div>
+                <div class="tool-content">
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDF files into one document. Rearrange pages if needed and create a unified PDF.</p>
+                    <button class="btn btn-primary">Merge PDF</button>
+                </div>
+            </div>
+            
+            <!-- Tool 3: Split PDF -->
+            <div class="tool-card" data-tool="split">
+                <div class="tool-icon">✂️</div>
+                <div class="tool-content">
+                    <h3>Split PDF</h3>
+                    <p>Separate one PDF into multiple files. Extract specific pages or split by page ranges.</p>
+                    <button class="btn btn-primary">Split PDF</button>
+                </div>
+            </div>
+            
+            <!-- Tool 4: Lock PDF -->
+            <div class="tool-card" data-tool="lock">
+                <div class="tool-icon">🔒</div>
+                <div class="tool-content">
+                    <h3>Lock PDF</h3>
+                    <p>Protect your PDF with a password. Prevent unauthorized access and editing of your documents.</p>
+                    <button class="btn btn-primary">Lock PDF</button>
+                </div>
+            </div>
+            
+            <!-- Tool 5: Convert PDF -->
+            <div class="tool-card" data-tool="convert">
+                <div class="tool-icon">🔄</div>
+                <div class="tool-content">
+                    <h3>Convert PDF</h3>
+                    <p>Convert PDF to Word, Excel, PowerPoint, JPG and more. Also convert other formats to PDF.</p>
+                    <button class="btn btn-primary">Convert Files</button>
+                </div>
+            </div>
+            
+            <!-- Tool 6: Edit PDF -->
+            <div class="tool-card" data-tool="edit">
+                <div class="tool-icon">✏️</div>
+                <div class="tool-content">
+                    <h3>Edit PDF</h3>
+                    <p>Edit your PDF documents directly in the browser. Add text, images, shapes and more.</p>
+                    <button class="btn btn-primary">Edit PDF</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Options Section -->
+    <div class="container">
+        <div class="tool-options" id="toolOptions">
+            <h2 id="toolTitle">PDF Tool Options</h2>
+            <p id="toolDescription">Customize your PDF processing options</p>
+            
+            <div class="option-group" id="compressOptions">
+                <label for="compressionLevel">Compression Level: <span id="compressionValue" class="range-value">Medium</span></label>
+                <input type="range" id="compressionLevel" min="1" max="3" value="2" step="1">
+                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                    <span>Low (Better Quality)</span>
+                    <span>Medium</span>
+                    <span>High (Smaller Size)</span>
+                </div>
+            </div>
+            
+            <div class="option-group" id="splitOptions" style="display: none;">
+                <label for="splitMethod">Split Method:</label>
+                <select id="splitMethod">
+                    <option value="range">Split by Page Range</option>
+                    <option value="every">Split Every X Pages</option>
+                    <option value="bookmarks">Split by Bookmarks</option>
+                </select>
+                
+                <div id="pageRangeGroup" style="margin-top: 15px;">
+                    <label for="pageRange">Page Range (e.g., 1-5, 8, 11-13):</label>
+                    <input type="text" id="pageRange" placeholder="Enter page ranges">
+                </div>
+            </div>
+            
+            <div class="option-group" id="lockOptions" style="display: none;">
+                <label for="password">Set Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+                
+                <label for="confirmPassword" style="margin-top: 15px;">Confirm Password:</label>
+                <input type="password" id="confirmPassword" placeholder="Confirm password">
+                
+                <label style="margin-top: 15px; display: block;">
+                    <input type="checkbox" id="allowPrinting"> Allow Printing
+                </label>
+                
+                <label style="display: block;">
+                    <input type="checkbox" id="allowCopying"> Allow Copying Text
+                </label>
+            </div>
+            
+            <div class="option-group" id="mergeOptions" style="display: none;">
+                <p>Upload multiple files to merge. You can reorder files before merging.</p>
+                <div id="fileList" style="margin-top: 15px; border: 1px dashed #ddd; border-radius: 8px; padding: 15px; min-height: 100px;">
+                    <p>No files selected</p>
+                </div>
+                <button class="btn btn-outline" style="margin-top: 15px;" id="addMoreFiles">Add More Files</button>
+            </div>
+            
+            <div class="option-group" id="convertOptions" style="display: none;">
+                <label for="convertTo">Convert To:</label>
+                <select id="convertTo">
+                    <option value="docx">Word Document (.docx)</option>
+                    <option value="xlsx">Excel Spreadsheet (.xlsx)</option>
+                    <option value="pptx">PowerPoint Presentation (.pptx)</option>
+                    <option value="jpg">JPEG Image (.jpg)</option>
+                    <option value="png">PNG Image (.png)</option>
+                    <option value="txt">Text File (.txt)</option>
+                </select>
+                
+                <label for="imageQuality" style="margin-top: 15px;">Image Quality (if applicable):</label>
+                <select id="imageQuality">
+                    <option value="high">High (Best Quality)</option>
+                    <option value="medium" selected>Medium (Good Quality)</option>
+                    <option value="low">Low (Smaller Size)</option>
+                </select>
+            </div>
+            
+            <button class="btn btn-primary" id="processBtn" style="margin-top: 20px;">Process Document</button>
+        </div>
+    </div>
+
+    <!-- File Upload Area -->
+    <div class="container">
+        <div class="file-upload-area">
+            <h2>Upload Your Files</h2>
+            <p>Drag and drop files here or click to browse</p>
+            <div class="upload-box" id="uploadBox">
+                <div class="upload-icon">📤</div>
+                <h3>Drag & Drop your files here</h3>
+                <p>Maximum file size: 100MB</p>
+                <p>Supported formats: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, JPG, PNG</p>
+                <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.jpeg,.png" style="display: none;" multiple>
+                <button class="btn btn-primary" id="selectFileBtn" style="margin-top: 20px;">Select Files</button>
+            </div>
+            <div class="file-info" id="fileInfo">No file selected</div>
+            <p>Your files are secure. We automatically delete them after processing.</p>
+            
+            <div class="preview-container" id="previewContainer">
+                <h3>Document Preview</h3>
+                <div id="pdfPreview"></div>
+            </div>
+            
+            <div class="processing-container" id="processingContainer">
+                <div class="upload-icon">⏳</div>
+                <h3>Processing your file...</h3>
+                <p>This may take a few moments depending on file size</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+            </div>
+            
+            <div class="result-container" id="resultContainer">
+                <div class="upload-icon">✅</div>
+                <h3>Processing Complete!</h3>
+                <p>Your file is ready for download</p>
+                <div class="file-info">
+                    <strong>Original size:</strong> <span id="originalSize">0 KB</span> | 
+                    <strong>New size:</strong> <span id="newSize">0 KB</span> | 
+                    <strong>Reduction:</strong> <span id="reduction">0%</span>
+                </div>
+                <a href="#" class="btn btn-primary" id="downloadBtn" style="margin-top: 20px;">Download File</a>
+                <button class="btn btn-outline" id="newDocumentBtn" style="margin-top: 10px;">Process Another Document</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Process your PDF files in just three simple steps</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload Files</h3>
+                    <p>Select the PDF files you want to process from your device, Google Drive or Dropbox.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Process & Edit</h3>
+                    <p>Choose your tool and adjust settings. Preview changes before processing.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Download</h3>
+                    <p>Download your processed PDF files instantly. Your files are automatically deleted from our servers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose PDFMaster Pro?</h2>
+                <p>We provide the best PDF tools with exceptional quality</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <h3><span class="feature-icon">🔒</span> Secure Processing</h3>
+                    <p>All file transfers are secured with SSL encryption. Files are automatically deleted after processing.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3><span class="feature-icon">🚀</span> Fast Processing</h3>
+                    <p>Our cloud-based servers process files in seconds, no matter how large your documents are.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3><span class="feature-icon">💯</span> High Quality</h3>
+                    <p>Maintain the original quality of your documents while reducing file size or converting formats.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3><span class="feature-icon">🆓</span> 100% Free</h3>
+                    <p>All our tools are completely free to use with no hidden costs or watermarks.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3><span class="feature-icon">🌐</span> Browser-Based</h3>
+                    <p>No installation required. Works on all modern browsers and devices.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3><span class="feature-icon">📱</span> Mobile Friendly</h3>
+                    <p>Access our tools on your smartphone or tablet. Process PDFs on the go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Thousands of users trust our PDF tools every day</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"PDFMaster Pro saved me so much time! I compress PDFs daily for work and this tool is the fastest and most reliable I've found."</p>
+                    <div class="client">
+                        <div class="client-avatar">JS</div>
+                        <div class="client-info">
+                            <h4>John Smith</h4>
+                            <p>Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"The merge tool is fantastic! I regularly combine reports from my team and this makes the process effortless."</p>
+                    <div class="client">
+                        <div class="client-avatar">SD</div>
+                        <div class="client-info">
+                            <h4>Sarah Davis</h4>
+                            <p>Project Lead</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"As a student, I use PDFMaster Pro weekly to compress lecture slides and convert documents. It's completely free and works perfectly!"</p>
+                    <div class="client">
+                        <div class="client-avatar">MJ</div>
+                        <div class="client-info">
+                            <h4>Michael Johnson</h4>
+                            <p>University Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PDFMaster Pro</h3>
+                    <p>The ultimate PDF solution for everyone. Free, secure and easy to use tools for all your PDF needs.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Compress PDF</a></li>
+                        <li><a href="#">Merge PDF</a></li>
+                        <li><a href="#">Split PDF</a></li>
+                        <li><a href="#">Lock PDF</a></li>
+                        <li><a href="#">Convert PDF</a></li>
+                        <li><a href="#">Edit PDF</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PDFMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
