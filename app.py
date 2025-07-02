@@ -4,6 +4,7 @@ import shutil
 import subprocess
 import zipfile
 import io
+import fitz  # PyMuPDF
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
@@ -43,7 +44,26 @@ def compress_with_ghostscript(input_path, output_path, quality='screen'):
         input_path
     ]
 
-    subprocess.run(command, check=True)
+    subprocess.run(command, check=True, timeout=180)
+
+def compress_with_pymupdf(input_path, output_path):
+    doc = fitz.open(input_path)
+
+    for page in doc:
+        images = page.get_images(full=True)
+        for img in images:
+            xref = img[0]
+            try:
+                pix = fitz.Pixmap(doc, xref)
+                if pix.n > 4:
+                    pix = fitz.Pixmap(fitz.csRGB, pix)
+                doc.replace_image(xref, pix)
+                pix = None
+            except Exception:
+                continue
+
+    doc.save(output_path, garbage=4, deflate=True, compress=True)
+    doc.close()
 
 @app.route('/')
 def index():
@@ -87,11 +107,16 @@ def compress_pdf():
     output_filename = f"compressed_{pdf_files[0]}"
     output_path = os.path.join(app.config['PROCESSED_FOLDER'], output_filename)
 
+    compression_method = "Ghostscript"
     try:
         quality = 'screen' if level == '3' else 'ebook'
         compress_with_ghostscript(input_path, output_path, quality)
-    except subprocess.CalledProcessError:
-        return jsonify({'success': False, 'message': 'Compression failed'}), 500
+    except Exception:
+        try:
+            compress_with_pymupdf(input_path, output_path)
+            compression_method = "PyMuPDF"
+        except Exception as inner_error:
+            return jsonify({'success': False, 'message': f'Compression failed with both methods. {str(inner_error)}'}), 500
 
     original_size = os.path.getsize(input_path)
     new_size = os.path.getsize(output_path)
@@ -103,6 +128,7 @@ def compress_pdf():
         'download_url': f'/download/{output_filename}',
         'original_size': original_size,
         'new_size': new_size,
+        'method': compression_method,
         'reduction': round((1 - (new_size / original_size)) * 100, 1)
     })
 
