@@ -1,6 +1,7 @@
 import os
 import uuid
 import shutil
+import subprocess
 import zipfile
 import io
 from datetime import datetime
@@ -11,14 +12,38 @@ from PyPDF2 import PdfReader, PdfWriter, PdfMerger
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['PROCESSED_FOLDER'] = 'processed'
-app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB limit
 app.config['ALLOWED_EXTENSIONS'] = {'pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'jpg', 'jpeg', 'png'}
 
+# Ensure folders exist
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 os.makedirs(app.config['PROCESSED_FOLDER'], exist_ok=True)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
+
+def compress_with_ghostscript(input_path, output_path, quality='screen'):
+    quality_settings = {
+        'screen': '/screen',
+        'ebook': '/ebook',
+        'printer': '/printer',
+        'prepress': '/prepress',
+        'default': '/default'
+    }
+
+    command = [
+        'gs',
+        '-sDEVICE=pdfwrite',
+        '-dCompatibilityLevel=1.4',
+        f'-dPDFSETTINGS={quality_settings.get(quality, "/screen")}',
+        '-dNOPAUSE',
+        '-dQUIET',
+        '-dBATCH',
+        f'-sOutputFile={output_path}',
+        input_path
+    ]
+
+    subprocess.run(command, check=True)
 
 @app.route('/')
 def index():
@@ -62,18 +87,11 @@ def compress_pdf():
     output_filename = f"compressed_{pdf_files[0]}"
     output_path = os.path.join(app.config['PROCESSED_FOLDER'], output_filename)
 
-    reader = PdfReader(input_path)
-    writer = PdfWriter()
-
-    for page in reader.pages:
-        writer.add_page(page)
-
-    if level == '3':
-        for page in writer.pages:
-            page.compress_content_streams()
-
-    with open(output_path, "wb") as f:
-        writer.write(f)
+    try:
+        quality = 'screen' if level == '3' else 'ebook'
+        compress_with_ghostscript(input_path, output_path, quality)
+    except subprocess.CalledProcessError:
+        return jsonify({'success': False, 'message': 'Compression failed'}), 500
 
     original_size = os.path.getsize(input_path)
     new_size = os.path.getsize(output_path)
@@ -177,7 +195,6 @@ def split_pdf():
                 zipf.writestr(f"page_{i + 1}.pdf", pdf_bytes.read())
 
     new_size = os.path.getsize(zip_path)
-
     shutil.rmtree(upload_dir)
 
     return jsonify({
