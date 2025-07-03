@@ -73,188 +73,60 @@
         
         <div class="tools-grid">
             <!-- Tool 1: Compress PDF -->
-            <div class="tool-card" data-tool="compress">
+            <a href="/compress" target="_blank" class="tool-card">
                 <div class="tool-icon">📦</div>
                 <div class="tool-content">
                     <h3>Compress PDF</h3>
-                    <p>Reduce file size while optimizing for maximal PDF quality. Make large files smaller without losing quality.</p>
-                    <button class="btn btn-primary">Compress PDF</button>
+                    <p>Reduce file size while optimizing for maximal PDF quality.</p>
                 </div>
-            </div>
+            </a>
             
             <!-- Tool 2: Merge PDF -->
-            <div class="tool-card" data-tool="merge">
+            <a href="/merge" target="_blank" class="tool-card">
                 <div class="tool-icon">🧩</div>
                 <div class="tool-content">
                     <h3>Merge PDF</h3>
-                    <p>Combine multiple PDF files into one document. Rearrange pages if needed and create a unified PDF.</p>
-                    <button class="btn btn-primary">Merge PDF</button>
+                    <p>Combine multiple PDF files into one document.</p>
                 </div>
-            </div>
+            </a>
             
             <!-- Tool 3: Split PDF -->
-            <div class="tool-card" data-tool="split">
+            <a href="/split" target="_blank" class="tool-card">
                 <div class="tool-icon">✂️</div>
                 <div class="tool-content">
                     <h3>Split PDF</h3>
-                    <p>Separate one PDF into multiple files. Extract specific pages or split by page ranges.</p>
-                    <button class="btn btn-primary">Split PDF</button>
+                    <p>Separate one PDF into multiple files.</p>
                 </div>
-            </div>
+            </a>
             
             <!-- Tool 4: Lock PDF -->
-            <div class="tool-card" data-tool="lock">
+            <a href="/lock" target="_blank" class="tool-card">
                 <div class="tool-icon">🔒</div>
                 <div class="tool-content">
                     <h3>Lock PDF</h3>
-                    <p>Protect your PDF with a password. Prevent unauthorized access and editing of your documents.</p>
-                    <button class="btn btn-primary">Lock PDF</button>
+                    <p>Protect your PDF with a password.</p>
                 </div>
-            </div>
+            </a>
             
             <!-- Tool 5: Convert PDF -->
-            <div class="tool-card" data-tool="convert">
+            <a href="/convert" target="_blank" class="tool-card">
                 <div class="tool-icon">🔄</div>
                 <div class="tool-content">
                     <h3>Convert PDF</h3>
-                    <p>Convert PDF to Word, Excel, PowerPoint, JPG and more. Also convert other formats to PDF.</p>
-                    <button class="btn btn-primary">Convert Files</button>
+                    <p>Convert PDF to Word, Excel, PowerPoint, JPG and more.</p>
                 </div>
-            </div>
+            </a>
             
             <!-- Tool 6: Edit PDF -->
-            <div class="tool-card" data-tool="edit">
+            <a href="/edit" target="_blank" class="tool-card">
                 <div class="tool-icon">✏️</div>
                 <div class="tool-content">
                     <h3>Edit PDF</h3>
-                    <p>Edit your PDF documents directly in the browser. Add text, images, shapes and more.</p>
-                    <button class="btn btn-primary">Edit PDF</button>
+                    <p>Edit your PDF documents directly in the browser.</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
-
-    <!-- Tool Options Section -->
-    <div class="container">
-        <div class="tool-options" id="toolOptions">
-            <h2 id="toolTitle">PDF Tool Options</h2>
-            <p id="toolDescription">Customize your PDF processing options</p>
-            
-            <div class="option-group" id="compressOptions">
-                <label for="compressionLevel">Compression Level: <span id="compressionValue" class="range-value">Medium</span></label>
-                <input type="range" id="compressionLevel" min="1" max="3" value="2" step="1">
-                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
-                    <span>Low (Better Quality)</span>
-                    <span>Medium</span>
-                    <span>High (Smaller Size)</span>
-                </div>
-            </div>
-            
-            <div class="option-group" id="splitOptions" style="display: none;">
-                <label for="splitMethod">Split Method:</label>
-                <select id="splitMethod">
-                    <option value="range">Split by Page Range</option>
-                    <option value="every">Split Every X Pages</option>
-                    <option value="bookmarks">Split by Bookmarks</option>
-                </select>
-                
-                <div id="pageRangeGroup" style="margin-top: 15px;">
-                    <label for="pageRange">Page Range (e.g., 1-5, 8, 11-13):</label>
-                    <input type="text" id="pageRange" placeholder="Enter page ranges">
-                </div>
-            </div>
-            
-            <div class="option-group" id="lockOptions" style="display: none;">
-                <label for="password">Set Password:</label>
-                <input type="password" id="password" placeholder="Enter password">
-                
-                <label for="confirmPassword" style="margin-top: 15px;">Confirm Password:</label>
-                <input type="password" id="confirmPassword" placeholder="Confirm password">
-                
-                <label style="margin-top: 15px; display: block;">
-                    <input type="checkbox" id="allowPrinting"> Allow Printing
-                </label>
-                
-                <label style="display: block;">
-                    <input type="checkbox" id="allowCopying"> Allow Copying Text
-                </label>
-            </div>
-            
-            <div class="option-group" id="mergeOptions" style="display: none;">
-                <p>Upload multiple files to merge. You can reorder files before merging.</p>
-                <div id="fileList" style="margin-top: 15px; border: 1px dashed #ddd; border-radius: 8px; padding: 15px; min-height: 100px;">
-                    <p>No files selected</p>
-                </div>
-                <button class="btn btn-outline" style="margin-top: 15px;" id="addMoreFiles">Add More Files</button>
-            </div>
-            
-            <div class="option-group" id="convertOptions" style="display: none;">
-                <label for="convertTo">Convert To:</label>
-                <select id="convertTo">
-                    <option value="docx">Word Document (.docx)</option>
-                    <option value="xlsx">Excel Spreadsheet (.xlsx)</option>
-                    <option value="pptx">PowerPoint Presentation (.pptx)</option>
-                    <option value="jpg">JPEG Image (.jpg)</option>
-                    <option value="png">PNG Image (.png)</option>
-                    <option value="txt">Text File (.txt)</option>
-                </select>
-                
-                <label for="imageQuality" style="margin-top: 15px;">Image Quality (if applicable):</label>
-                <select id="imageQuality">
-                    <option value="high">High (Best Quality)</option>
-                    <option value="medium" selected>Medium (Good Quality)</option>
-                    <option value="low">Low (Smaller Size)</option>
-                </select>
-            </div>
-            
-            <button class="btn btn-primary" id="processBtn" style="margin-top: 20px;">Process Document</button>
-        </div>
-    </div>
-
-    <!-- File Upload Area -->
-    <div class="container">
-        <div class="file-upload-area">
-            <h2>Upload Your Files</h2>
-            <p>Drag and drop files here or click to browse</p>
-            <div class="upload-box" id="uploadBox">
-                <div class="upload-icon">📤</div>
-                <h3>Drag & Drop your files here</h3>
-                <p>Maximum file size: 100MB</p>
-                <p>Supported formats: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, JPG, PNG</p>
-                <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.jpeg,.png" style="display: none;" multiple>
-                <button class="btn btn-primary" id="selectFileBtn" style="margin-top: 20px;">Select Files</button>
-            </div>
-            <div class="file-info" id="fileInfo">No file selected</div>
-            <p>Your files are secure. We automatically delete them after processing.</p>
-            
-            <div class="preview-container" id="previewContainer">
-                <h3>Document Preview</h3>
-                <div id="pdfPreview"></div>
-            </div>
-            
-            <div class="processing-container" id="processingContainer">
-                <div class="upload-icon">⏳</div>
-                <h3>Processing your file...</h3>
-                <p>This may take a few moments depending on file size</p>
-                <div class="progress-bar">
-                    <div class="progress" id="progressBar"></div>
-                </div>
-            </div>
-            
-            <div class="result-container" id="resultContainer">
-                <div class="upload-icon">✅</div>
-                <h3>Processing Complete!</h3>
-                <p>Your file is ready for download</p>
-                <div class="file-info">
-                    <strong>Original size:</strong> <span id="originalSize">0 KB</span> | 
-                    <strong>New size:</strong> <span id="newSize">0 KB</span> | 
-                    <strong>Reduction:</strong> <span id="reduction">0%</span>
-                </div>
-                <a href="#" class="btn btn-primary" id="downloadBtn" style="margin-top: 20px;">Download File</a>
-                <button class="btn btn-outline" id="newDocumentBtn" style="margin-top: 10px;">Process Another Document</button>
-            </div>
-        </div>
-    </div>
 
     <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works">
@@ -385,12 +257,12 @@
                 <div class="footer-col">
                     <h3>Tools</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Compress PDF</a></li>
-                        <li><a href="#">Merge PDF</a></li>
-                        <li><a href="#">Split PDF</a></li>
-                        <li><a href="#">Lock PDF</a></li>
-                        <li><a href="#">Convert PDF</a></li>
-                        <li><a href="#">Edit PDF</a></li>
+                        <li><a href="/compress" target="_blank">Compress PDF</a></li>
+                        <li><a href="/merge" target="_blank">Merge PDF</a></li>
+                        <li><a href="/split" target="_blank">Split PDF</a></li>
+                        <li><a href="/lock" target="_blank">Lock PDF</a></li>
+                        <li><a href="/convert" target="_blank">Convert PDF</a></li>
+                        <li><a href="/edit" target="_blank">Edit PDF</a></li>
                     </ul>
                 </div>
                 
