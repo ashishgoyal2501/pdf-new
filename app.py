@@ -317,33 +317,5 @@ def download_file(filename):
     return send_from_directory(app.config['PROCESSED_FOLDER'], filename, as_attachment=True)
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
-@app.route('/help')
-def help_page():
-    return render_template('help.html')
-
-@app.route('/faq')
-def faq():
-    return render_template('faq.html')
-
-@app.route('/terms')
-def terms():
-    return render_template('terms.html')
-
-@app.route('/privacy')
-def privacy():
-    return render_template('privacy.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
