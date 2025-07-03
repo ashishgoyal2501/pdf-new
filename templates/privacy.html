@@ -376,12 +376,13 @@
                     <span class="logo-icon">📄</span>
                     <span>PDFy</span>
                 </a>
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="privacy.html">Privacy</a>
-                </div>
+<div class="nav-links">
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('faq') }}">FAQ</a>
+    <a href="{{ url_for('help') }}">Help Center</a>
+</div>
                 <div>
                     <a href="index.html" class="btn btn-primary">Get Started</a>
                 </div>
@@ -615,25 +616,21 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </div>
+    <h3>Company</h3>
+    <ul class="footer-links">
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+        <li><a href="{{ url_for('terms') }}">Terms of Service</a></li>
+    </ul>
+</div>
+<div class="footer-col">
+    <h3>Support</h3>
+    <ul class="footer-links">
+        <li><a href="{{ url_for('help_page') }}">Help Center</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+    </ul>
+</div>
             </div>
             
             <div class="copyright">
