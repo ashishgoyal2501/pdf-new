@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | PDFy - PDF Tools Platform</title>
+    <meta name="description" content="Review the Terms of Service for PDFy. These terms govern your use of our PDF tools and services.">
+    <meta name="keywords" content="pdfy terms of service, pdf tools terms, user agreement, pdfy legal">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Terms of Service | PDFy - PDF Tools Platform">
+    <meta property="og:description" content="Understand the terms that govern your use of PDFy's PDF tools and services.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Terms of Service | PDFy - PDF Tools Platform">
+    <meta property="twitter:description" content="Review the legal terms for using PDFy's free PDF tools.">
+    
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #f72585;
+            --dark: #1d3557;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Terms Hero Section */
+        .terms-hero {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .terms-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .terms-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Terms Content */
+        .terms-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 60px;
+        }
+        
+        .terms-section {
+            margin-bottom: 50px;
+        }
+        
+        .terms-section h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .terms-section p {
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .terms-section ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .terms-section li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .terms-section li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .info-box {
+            background-color: rgba(67, 97, 238, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .highlight {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin: 30px 0;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .highlight h4 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .last-updated {
+            background-color: var(--light);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 40px 0 20px;
+            font-weight: 500;
+        }
+        
+        .acceptance-box {
+            background-color: #e6f7ff;
+            border: 1px solid #91d5ff;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2b3a57;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .terms-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .terms-container {
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .terms-hero {
+                padding: 70px 0;
+            }
+            
+            .terms-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .terms-section h3 {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .terms-hero {
+                padding: 50px 0;
+            }
+            
+            .terms-container {
+                padding: 30px 20px;
+            }
+            
+            .highlight {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span>PDFy</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+                <div>
+                    <a href="index.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Terms Hero Section -->
+    <section class="terms-hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>These terms govern your use of PDFy's PDF tools and services.</p>
+            <p>Last Updated: July 3, 2025</p>
+        </div>
+    </section>
+
+    <!-- Terms Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="last-updated">
+                <p>These Terms of Service were last updated on <strong>July 3, 2025</strong></p>
+            </div>
+            
+            <div class="terms-container">
+                <div class="terms-section">
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>By accessing or using the PDFy website at <a href="https://www.pdfy.in">https://www.pdfy.in</a> ("Site") and any of its services ("Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to all of these Terms, do not use our Services.</p>
+                    
+                    <div class="acceptance-box">
+                        <p>Your use of PDFy constitutes your agreement to these Terms. If you are using our Services on behalf of an organization, you are agreeing to these Terms for that organization and representing that you have authority to bind that organization to these Terms.</p>
+                    </div>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>2. Description of Services</h3>
+                    <p>PDFy provides online tools for processing PDF documents, including but not limited to:</p>
+                    <ul>
+                        <li>Compressing PDF files</li>
+                        <li>Merging multiple PDFs</li>
+                        <li>Splitting PDF documents</li>
+                        <li>Converting PDFs to other formats</li>
+                        <li>Converting other formats to PDF</li>
+                        <li>Securing PDFs with passwords</li>
+                        <li>Editing PDF documents</li>
+                    </ul>
+                    
+                    <p>These Services are provided "as is" and PDFy reserves the right to modify, suspend, or discontinue any Service at any time without notice.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>3. User Responsibilities</h3>
+                    <p>When using our Services, you agree to:</p>
+                    <ul>
+                        <li>Use our Services only for lawful purposes</li>
+                        <li>Not upload any content that is illegal, harmful, or infringes on others' rights</li>
+                        <li>Not attempt to disrupt or interfere with our Services</li>
+                        <li>Not use automated systems to access our Services</li>
+                        <li>Comply with all applicable laws and regulations</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <p><strong>Important:</strong> You are solely responsible for the documents you upload and process through our Services. PDFy does not monitor or review user content for legality or appropriateness.</p>
+                    </div>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>4. Intellectual Property Rights</h3>
+                    <h4>Your Content</h4>
+                    <p>You retain all rights to the documents and files you upload to our Services. By uploading content, you grant PDFy a limited, non-exclusive, royalty-free license to process your files solely to provide the Services you request.</p>
+                    
+                    <h4>Our Property</h4>
+                    <p>All rights, title, and interest in and to the Services (excluding content provided by users) are and will remain the exclusive property of PDFy. Our Services are protected by copyright, trademark, and other laws.</p>
+                    
+                    <div class="highlight">
+                        <h4>Trademark Notice</h4>
+                        <p>"PDFy", our logos, and all related names, logos, product and service names, designs, and slogans are trademarks of PDFy or its affiliates. You must not use such marks without our prior written permission.</p>
+                    </div>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>5. Prohibited Uses</h3>
+                    <p>You may use our Services only for lawful purposes and in accordance with these Terms. You agree not to use our Services:</p>
+                    <ul>
+                        <li>In any way that violates any applicable law or regulation</li>
+                        <li>To exploit, harm, or attempt to exploit or harm minors</li>
+                        <li>To transmit any advertising or promotional material without consent</li>
+                        <li>To impersonate or attempt to impersonate PDFy, a PDFy employee, or another user</li>
+                        <li>In any way that interferes with or disrupts the Services</li>
+                        <li>To engage in any conduct that restricts or inhibits anyone's use of the Services</li>
+                    </ul>
+                    
+                    <p>PDFy reserves the right to terminate or suspend access to our Services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>6. Service Limitations</h3>
+                    <p>PDFy Services have the following limitations:</p>
+                    <ul>
+                        <li><strong>File Size:</strong> Maximum file size per upload is 100MB</li>
+                        <li><strong>Daily Usage:</strong> Maximum of 20 files processed per day per user</li>
+                        <li><strong>File Retention:</strong> Uploaded files are automatically deleted within 1 hour after processing</li>
+                        <li><strong>Content Restrictions:</strong> You may not process illegal, harmful, or infringing content</li>
+                    </ul>
+                    
+                    <p>PDFy reserves the right to modify these limitations at any time without notice.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>7. Disclaimers</h3>
+                    <p>YOUR USE OF THE SERVICES IS AT YOUR SOLE RISK. THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND.</p>
+                    
+                    <p>PDFY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+                    
+                    <p>PDFY DOES NOT WARRANT THAT:</p>
+                    <ul>
+                        <li>THE SERVICES WILL MEET YOUR REQUIREMENTS</li>
+                        <li>THE SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE</li>
+                        <li>THE RESULTS OBTAINED FROM USING THE SERVICES WILL BE ACCURATE OR RELIABLE</li>
+                        <li>ANY ERRORS IN THE SERVICES WILL BE CORRECTED</li>
+                    </ul>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>8. Limitation of Liability</h3>
+                    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL PDFY, ITS AFFILIATES, OR THEIR RESPECTIVE DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+                    
+                    <ul>
+                        <li>YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICES</li>
+                        <li>ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICES</li>
+                        <li>ANY CONTENT OBTAINED FROM THE SERVICES</li>
+                        <li>UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT</li>
+                    </ul>
+                    
+                    <p>IN NO EVENT SHALL THE AGGREGATE LIABILITY OF PDFY EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS (U.S. $100.00) OR THE AMOUNT YOU PAID PDFY, IF ANY, IN THE PAST SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.</p>
+                    
+                    <div class="info-box">
+                        <p><strong>Note:</strong> Some jurisdictions do not allow the exclusion of certain warranties or the limitation or exclusion of liability for incidental or consequential damages. Accordingly, some of the above limitations may not apply to you.</p>
+                    </div>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>9. Indemnification</h3>
+                    <p>You agree to defend, indemnify, and hold harmless PDFy, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms or your use of the Services, including, but not limited to, your User Contributions, any use of the Services' content, services, and products other than as expressly authorized in these Terms, or your use of any information obtained from the Services.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>10. Governing Law</h3>
+                    <p>These Terms shall be governed and construed in accordance with the laws of India, without regard to its conflict of law provisions.</p>
+                    
+                    <p>Any legal suit, action, or proceeding arising out of, or related to, these Terms or the Services shall be instituted exclusively in the courts located in Gurugram, Haryana, India. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>11. Changes to Terms</h3>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                    
+                    <p>By continuing to access or use our Services after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Services.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h3>12. Contact Information</h3>
+                    <p>If you have any questions about these Terms, please contact us:</p>
+                    
+                    <ul>
+                        <li>By email: <a href="mailto:support@pdfy.in">support@pdfy.in</a></li>
+                        
+                    </ul>
+                    
+                    <div class="highlight">
+                        <h4>Notice to California Residents</h4>
+                        <p>If you are a California resident, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 1625 North Market Blvd., Suite N 112, Sacramento, CA 95834, or by telephone at (800) 952-5210.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PDFy</h3>
+                    <p>Advanced PDF tools for everyone. Free, secure, and easy to use solutions for all your PDF needs.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Compress PDF</a></li>
+                        <li><a href="index.html">Merge PDF</a></li>
+                        <li><a href="index.html">Split PDF</a></li>
+                        <li><a href="index.html">Lock PDF</a></li>
+                        <li><a href="index.html">Convert PDF</a></li>
+                        <li><a href="index.html">Edit PDF</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 PDFy. All rights reserved. | support@pdfy.in</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

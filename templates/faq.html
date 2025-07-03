@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | PDFy - PDF Tools</title>
+    <meta name="description" content="Find answers to common questions about PDFy. Learn about our PDF tools, security, features, and account management.">
+    <meta name="keywords" content="pdfy faq, pdf tools questions, pdf compression help, pdf merge faq, pdfy support">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Frequently Asked Questions | PDFy - PDF Tools">
+    <meta property="og:description" content="Get answers to common questions about compressing, merging, converting, and editing PDF files with PDFy.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Frequently Asked Questions | PDFy - PDF Tools">
+    <meta property="twitter:description" content="Find solutions and information about all PDFy tools in our comprehensive FAQ section.">
+    
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #f72585;
+            --dark: #1d3557;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* FAQ Hero Section */
+        .faq-hero {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .faq-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .faq-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Search Section */
+        .search-section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin: -40px auto 60px;
+            max-width: 800px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            padding-right: 50px;
+            transition: var(--transition);
+        }
+        
+        .search-input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+        
+        /* FAQ Categories */
+        .categories-section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .category-btn {
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* FAQ Content */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+        
+        .faq-category-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer-content {
+            padding-bottom: 25px;
+            color: #444;
+        }
+        
+        .faq-answer.active {
+            padding: 0 25px;
+            max-height: 1000px;
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: var(--transition);
+            min-width: 30px;
+            text-align: right;
+        }
+        
+        .faq-icon.active {
+            transform: rotate(45deg);
+        }
+        
+        /* Contact Support */
+        .support-section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--box-shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .support-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .support-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .support-section p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2b3a57;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .faq-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .faq-hero {
+                padding: 70px 0;
+            }
+            
+            .faq-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .search-section {
+                padding: 30px 20px;
+            }
+            
+            .support-section {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .faq-hero {
+                padding: 50px 0;
+            }
+            
+            .faq-question {
+                padding: 20px;
+                font-size: 1.1rem;
+            }
+            
+            .faq-answer-content {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span>PDFy</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div>
+                    <a href="index.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find quick answers to common questions about our PDF tools and services</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="container">
+        <div class="search-section">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--dark);">What can we help you with?</h2>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search questions or topics...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Browse by Category</h2>
+                <p>Select a category to find related questions</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-btn active" data-category="general">
+                    <span>📄</span> General
+                </div>
+                <div class="category-btn" data-category="account">
+                    <span>👤</span> Account
+                </div>
+                <div class="category-btn" data-category="tools">
+                    <span>🛠️</span> PDF Tools
+                </div>
+                <div class="category-btn" data-category="security">
+                    <span>🔒</span> Security
+                </div>
+                <div class="category-btn" data-category="troubleshooting">
+                    <span>⚠️</span> Troubleshooting
+                </div>
+                <div class="category-btn" data-category="billing">
+                    <span>💳</span> Billing
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="container">
+        <div class="faq-container">
+            <!-- General Questions -->
+            <div class="faq-category" id="general-category">
+                <h3 class="faq-category-title">General Questions</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is PDFy?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            PDFy is a free online platform that provides a suite of tools for working with PDF documents. Our tools include PDF compression, merging, splitting, conversion, editing, and security features. All tools are accessible directly in your web browser with no installation required.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is PDFy really free to use?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, PDFy is completely free to use. We offer all our core PDF tools without any cost, registration requirements, or watermarks on your documents. We may offer premium features in the future, but our current toolset will remain free.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What file types does PDFy support?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            PDFy supports a wide range of file formats including:
+                            <ul style="margin: 15px 0 15px 30px;">
+                                <li>PDF (Portable Document Format)</li>
+                                <li>DOC and DOCX (Microsoft Word)</li>
+                                <li>PPT and PPTX (Microsoft PowerPoint)</li>
+                                <li>XLS and XLSX (Microsoft Excel)</li>
+                                <li>JPG, JPEG, PNG (Image formats)</li>
+                                <li>TXT (Plain Text)</li>
+                            </ul>
+                            Our conversion tools allow you to convert between these formats.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do I need to create an account to use PDFy?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No, you don't need to create an account to use PDFy's core features. You can upload, process, and download your files without any registration. If we introduce premium features in the future, account creation might be required for those specific features, but the basic tools will remain accessible without an account.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there a file size limit?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, for optimal performance, we currently have a file size limit of 100MB per file. This limit applies to both individual files and the total size when processing multiple files simultaneously. If you need to process larger files, you can split them into smaller parts using our split tool.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PDF Tools Questions -->
+            <div class="faq-category" id="tools-category" style="display: none;">
+                <h3 class="faq-category-title">PDF Tools</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I compress a PDF file?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            To compress a PDF file:
+                            <ol style="margin: 15px 0 15px 30px;">
+                                <li>Go to the Compress PDF tool on our website</li>
+                                <li>Upload your PDF file (drag and drop or click to browse)</li>
+                                <li>Select your desired compression level (low, medium, high)</li>
+                                <li>Click the "Compress PDF" button</li>
+                                <li>Download your compressed file when processing is complete</li>
+                            </ol>
+                            The compression process typically takes just a few seconds, depending on file size.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How can I merge multiple PDF files?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            To merge PDF files:
+                            <ol style="margin: 15px 0 15px 30px;">
+                                <li>Navigate to the Merge PDF tool</li>
+                                <li>Upload all PDF files you want to merge (you can upload multiple files at once)</li>
+                                <li>Arrange the files in your desired order</li>
+                                <li>Click the "Merge PDF" button</li>
+                                <li>Download your merged PDF document</li>
+                            </ol>
+                            You can merge up to 20 PDF files at once with a total size limit of 100MB.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I convert a PDF to Word document?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, you can easily convert PDF files to Word format:
+                            <ol style="margin: 15px 0 15px 30px;">
+                                <li>Go to the Convert PDF tool</li>
+                                <li>Upload your PDF file</li>
+                                <li>Select "Word Document (.docx)" as the output format</li>
+                                <li>Click the "Convert" button</li>
+                                <li>Download your converted Word document</li>
+                            </ol>
+                            Our converter preserves text formatting, images, and layout as accurately as possible.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I protect a PDF with a password?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            To password-protect a PDF:
+                            <ol style="margin: 15px 0 15px 30px;">
+                                <li>Access the Lock PDF tool</li>
+                                <li>Upload your PDF file</li>
+                                <li>Enter a strong password (twice for confirmation)</li>
+                                <li>Set permissions (printing, copying text, etc.) if desired</li>
+                                <li>Click "Protect PDF"</li>
+                                <li>Download your secured PDF file</li>
+                            </ol>
+                            Remember to keep your password safe - we don't store it and can't recover it if lost.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I edit text in a PDF document?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, with our Edit PDF tool you can:
+                            <ul style="margin: 15px 0 15px 30px;">
+                                <li>Add, edit, or delete text</li>
+                                <li>Insert images and shapes</li>
+                                <li>Highlight or underline text</li>
+                                <li>Add annotations and comments</li>
+                                <li>Insert or remove pages</li>
+                            </ul>
+                            Simply upload your PDF, make your edits using our intuitive editor, and download the modified document. Note that editing scanned PDFs requires OCR technology which is currently not available in our free version.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Security Questions -->
+            <div class="faq-category" id="security-category" style="display: none;">
+                <h3 class="faq-category-title">Security & Privacy</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is my data secure with PDFy?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely. We take security seriously:
+                            <ul style="margin: 15px 0 15px 30px;">
+                                <li>All file transfers use SSL encryption</li>
+                                <li>Uploaded files are stored on secure servers with limited access</li>
+                                <li>Files are automatically deleted within 1 hour after processing</li>
+                                <li>We never share your files with third parties</li>
+                                <li>We don't scan or analyze your document content</li>
+                            </ul>
+                            You can read more in our <a href="privacy.html">Privacy Policy</a>.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long do you keep my files?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We automatically delete all uploaded files and processed output within 1 hour after processing completes. We don't archive or store your documents long-term. Our system is designed to process files temporarily and then permanently remove them from our servers.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can you access the content of my PDF files?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No, we do not access, read, or analyze the content of your documents. Our systems process files automatically without human interaction. We only access metadata necessary for processing (file type, size, etc.), not the actual content of your documents.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Troubleshooting Questions -->
+            <div class="faq-category" id="troubleshooting-category" style="display: none;">
+                <h3 class="faq-category-title">Troubleshooting</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why won't my file upload?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            If you're having trouble uploading files:
+                            <ul style="margin: 15px 0 15px 30px;">
+                                <li><strong>Check file size:</strong> Ensure your file is under 100MB</li>
+                                <li><strong>Check file type:</strong> We support PDF, DOC/DOCX, PPT/PPTX, XLS/XLSX, JPG, PNG</li>
+                                <li><strong>Browser issues:</strong> Try updating your browser or using a different browser</li>
+                                <li><strong>Internet connection:</strong> Ensure you have a stable connection</li>
+                                <li><strong>Firewall/ad blockers:</strong> Disable temporarily to see if they're causing issues</li>
+                            </ul>
+                            If problems persist, please contact our support team.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why is my processed file taking so long to download?
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Slow downloads can be caused by:
+                            <ul style="margin: 15px 0 15px 30px;">
+                                <li><strong>Large file size:</strong> Even compressed files can be substantial</li>
+                                <li><strong>Internet speed:</strong> Check your connection speed</li>
+                                <li><strong>Browser issues:</strong> Try a different browser or clear cache</li>
+                                <li><strong>Server load:</strong> During peak times, downloads might be slower</li>
+                            </ul>
+                            If the download fails, try again after a few minutes. The file remains available for 1 hour after processing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Support -->
+    <section class="container">
+        <div class="support-section">
+            <div class="support-icon">❓</div>
+            <h2>Still have questions?</h2>
+            <p>Can't find what you're looking for? Our support team is ready to help you with any questions or issues.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Support</a>
+            <p style="margin-top: 20px; font-size: 1rem;">Email us at <a href="mailto:support@pdfy.in">support@pdfy.in</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PDFy</h3>
+                    <p>Advanced PDF tools for everyone. Free, secure, and easy to use solutions for all your PDF needs.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Compress PDF</a></li>
+                        <li><a href="index.html">Merge PDF</a></li>
+                        <li><a href="index.html">Split PDF</a></li>
+                        <li><a href="index.html">Lock PDF</a></li>
+                        <li><a href="index.html">Convert PDF</a></li>
+                        <li><a href="index.html">Edit PDF</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PDFy. All rights reserved. | support@pdfy.in</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.faq-icon');
+                
+                answer.classList.toggle('active');
+                icon.classList.toggle('active');
+            });
+        });
+        
+        // Category switching
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const categorySections = {
+            'general': document.getElementById('general-category'),
+            'tools': document.getElementById('tools-category'),
+            'security': document.getElementById('security-category'),
+            'troubleshooting': document.getElementById('troubleshooting-category')
+        };
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                
+                // Update active button
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Show selected category, hide others
+                Object.values(categorySections).forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                if (categorySections[category]) {
+                    categorySections[category].style.display = 'block';
+                }
+            });
+        });
+        
+        // Search functionality
+        document.querySelector('.search-input').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.toLowerCase().trim();
+                if (searchTerm) {
+                    // In a real implementation, this would filter FAQs
+                    alert(`Searching for: "${searchTerm}". In a real implementation, this would display matching FAQs.`);
+                    this.value = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

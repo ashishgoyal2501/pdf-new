@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | PDFy - Secure PDF Tools</title>
+    <meta name="description" content="Learn how PDFy protects your privacy. Our policy explains how we collect, use, and protect your information when you use our PDF tools.">
+    <meta name="keywords" content="pdfy privacy policy, pdf tools privacy, data security, pdfy security">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Privacy Policy | PDFy - Secure PDF Tools">
+    <meta property="og:description" content="Understand how PDFy protects your privacy and secures your documents.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Privacy Policy | PDFy - Secure PDF Tools">
+    <meta property="twitter:description" content="Your privacy matters. Learn how PDFy handles your data securely.">
+    
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #f72585;
+            --dark: #1d3557;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Policy Hero Section */
+        .policy-hero {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .policy-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .policy-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Policy Content */
+        .policy-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 50px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 60px;
+        }
+        
+        .policy-section {
+            margin-bottom: 50px;
+        }
+        
+        .policy-section h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .policy-section p {
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .policy-section ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .policy-section li {
+            margin-bottom: 10px;
+        }
+        
+        .info-box {
+            background-color: rgba(67, 97, 238, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .highlight {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin: 30px 0;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .highlight h4 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+        }
+        
+        .policy-table th, .policy-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .policy-table th {
+            background-color: var(--light);
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .policy-table tr:hover {
+            background-color: rgba(67, 97, 238, 0.03);
+        }
+        
+        .last-updated {
+            background-color: var(--light);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 40px 0 20px;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2b3a57;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .policy-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .policy-container {
+                padding: 40px 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .policy-hero {
+                padding: 70px 0;
+            }
+            
+            .policy-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .policy-section h3 {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .policy-hero {
+                padding: 50px 0;
+            }
+            
+            .policy-container {
+                padding: 30px 20px;
+            }
+            
+            .highlight {
+                padding: 20px;
+            }
+            
+            .policy-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span>PDFy</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+                <div>
+                    <a href="index.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Policy Hero Section -->
+    <section class="policy-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. Learn how we protect your information and documents.</p>
+            <p>Last Updated: July 3, 2025</p>
+        </div>
+    </section>
+
+    <!-- Policy Content Section -->
+    <section class="section">
+        <div class="container">
+            <div class="last-updated">
+                <p>This Privacy Policy was last updated on <strong>July 3, 2025</strong></p>
+            </div>
+            
+            <div class="policy-container">
+                <div class="policy-section">
+                    <h3>1. Introduction</h3>
+                    <p>Welcome to PDFy ("we", "our", or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://www.pdfy.in">https://www.pdfy.in</a> and use our PDF tools.</p>
+                    <p>By using our services, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>2. Information We Collect</h3>
+                    <p>We collect several types of information for various purposes to provide and improve our services to you.</p>
+                    
+                    <h4>Personal Information</h4>
+                    <p>When you use our services, we may ask you to provide certain personally identifiable information that can be used to contact or identify you. This may include:</p>
+                    <ul>
+                        <li>Email address (if you choose to sign up for an account)</li>
+                        <li>Payment information (if you choose premium services)</li>
+                        <li>Any information you voluntarily provide through support requests</li>
+                    </ul>
+                    
+                    <h4>Document Information</h4>
+                    <p>When you upload documents to our platform for processing:</p>
+                    <ul>
+                        <li>We temporarily store your files during processing</li>
+                        <li>We do not scan or analyze the content of your documents for any purpose other than providing the service you requested</li>
+                        <li>We automatically delete your files after processing is complete</li>
+                    </ul>
+                    
+                    <h4>Usage Data</h4>
+                    <p>We may collect information on how the service is accessed and used. This may include:</p>
+                    <ul>
+                        <li>Your computer's Internet Protocol address (IP address)</li>
+                        <li>Browser type and version</li>
+                        <li>Pages visited on our site</li>
+                        <li>Time and date of visit</li>
+                        <li>Time spent on pages</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>3. How We Use Your Information</h3>
+                    <p>We use the information we collect in various ways, including to:</p>
+                    <ul>
+                        <li>Provide, operate, and maintain our services</li>
+                        <li>Improve, personalize, and expand our services</li>
+                        <li>Understand and analyze how you use our services</li>
+                        <li>Develop new products, services, features, and functionality</li>
+                        <li>Communicate with you, either directly or through one of our partners, for customer service, updates, and marketing purposes</li>
+                        <li>Process your transactions</li>
+                        <li>Prevent fraud and enhance security</li>
+                    </ul>
+                    
+                    <div class="info-box">
+                        <p><strong>Important:</strong> We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. We do not use your documents for any purpose other than providing the service you requested.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>4. Data Storage and Security</h3>
+                    <p>The security of your data is important to us. We implement appropriate technical and organizational measures to protect your personal information against unauthorized or unlawful processing, accidental loss, destruction or damage.</p>
+                    
+                    <h4>Document Security</h4>
+                    <ul>
+                        <li>All file transfers are secured with SSL encryption</li>
+                        <li>Uploaded documents are stored on secure servers with limited access</li>
+                        <li>Files are automatically deleted within 1 hour after processing</li>
+                        <li>We never store processed files unless you explicitly choose to save them</li>
+                    </ul>
+                    
+                    <h4>Data Retention</h4>
+                    <p>We retain your personal information only for as long as necessary to provide you with our services and as described in this Privacy Policy. We will also retain usage data for internal analysis purposes.</p>
+                    
+                    <div class="highlight">
+                        <h4>Our Security Commitment</h4>
+                        <p>We implement a variety of security measures to maintain the safety of your personal information. All supplied sensitive information is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our databases to be only accessed by those authorized with special access rights to our systems.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>5. Cookies and Tracking Technologies</h3>
+                    <p>We use cookies and similar tracking technologies to track activity on our service and hold certain information.</p>
+                    
+                    <p>Cookies are files with a small amount of data which may include an anonymous unique identifier. They are sent to your browser from a website and stored on your device.</p>
+                    
+                    <h4>Types of Cookies We Use</h4>
+                    <table class="policy-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Essential Cookies</td>
+                                <td>Necessary for the website to function properly</td>
+                                <td>Session</td>
+                            </tr>
+                            <tr>
+                                <td>Functionality Cookies</td>
+                                <td>Remember your preferences and settings</td>
+                                <td>Persistent (up to 1 year)</td>
+                            </tr>
+                            <tr>
+                                <td>Analytics Cookies</td>
+                                <td>Help us understand how visitors interact with our website</td>
+                                <td>Persistent (up to 2 years)</td>
+                            </tr>
+                            <tr>
+                                <td>Advertising Cookies</td>
+                                <td>Used to deliver relevant ads (if we use advertising)</td>
+                                <td>Persistent (up to 1 year)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our service.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>6. Third-Party Services</h3>
+                    <p>We may employ third-party companies and individuals to facilitate our service ("Service Providers"), to provide the service on our behalf, or to assist us in analyzing how our service is used.</p>
+                    
+                    <p>These third parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                    
+                    <h4>Third-Party Service Providers</h4>
+                    <ul>
+                        <li><strong>Cloud Storage Providers:</strong> For temporary file storage during processing</li>
+                        <li><strong>Analytics Providers:</strong> Such as Google Analytics to monitor and analyze web traffic</li>
+                        <li><strong>Payment Processors:</strong> For processing payments (if applicable)</li>
+                        <li><strong>Customer Support Tools:</strong> To manage support requests</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>7. Your Data Rights</h3>
+                    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                    
+                    <ul>
+                        <li><strong>Access:</strong> Request copies of your personal data</li>
+                        <li><strong>Rectification:</strong> Request correction of inaccurate data</li>
+                        <li><strong>Erasure:</strong> Request deletion of your personal data</li>
+                        <li><strong>Restrict Processing:</strong> Request restriction of processing your personal data</li>
+                        <li><strong>Data Portability:</strong> Request transfer of your data to another organization</li>
+                        <li><strong>Objection:</strong> Object to processing of your personal data</li>
+                    </ul>
+                    
+                    <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@pdfy.in">privacy@pdfy.in</a>. We will respond to your request within 30 days.</p>
+                    
+                    <div class="info-box">
+                        <p><strong>Note:</strong> For security purposes, we may need to verify your identity before fulfilling your request.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>8. Children's Privacy</h3>
+                    <p>Our services are not intended for use by children under the age of 13 ("Children").</p>
+                    
+                    <p>We do not knowingly collect personally identifiable information from children under 13. If you become aware that a child has provided us with personal information without parental consent, please contact us. If we become aware that we have collected personal information from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>9. Changes to This Policy</h3>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+                    
+                    <p>We will let you know via email and/or a prominent notice on our service prior to the change becoming effective and update the "Last Updated" date at the top of this Privacy Policy.</p>
+                    
+                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h3>10. Contact Us</h3>
+                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                    
+                    <ul>
+                        <li>By email: <a href="mailto:privacy@pdfy.in">privacy@pdfy.in</a></li>
+                        <li>By mail: PDFy Privacy Office, 123 Tech Park, Sector 15, Gurugram, Haryana 122001, India</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <h4>Data Protection Officer</h4>
+                        <p>We have appointed a Data Protection Officer (DPO) who is responsible for overseeing questions in relation to this privacy policy. If you have any questions about this privacy policy, including any requests to exercise your legal rights, please contact the DPO at <a href="mailto:dpo@pdfy.in">dpo@pdfy.in</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>PDFy</h3>
+                    <p>Advanced PDF tools for everyone. Free, secure, and easy to use solutions for all your PDF needs.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Compress PDF</a></li>
+                        <li><a href="index.html">Merge PDF</a></li>
+                        <li><a href="index.html">Split PDF</a></li>
+                        <li><a href="index.html">Lock PDF</a></li>
+                        <li><a href="index.html">Convert PDF</a></li>
+                        <li><a href="index.html">Edit PDF</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PDFy. All rights reserved. | support@pdfy.in</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
