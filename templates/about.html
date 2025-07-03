@@ -521,12 +521,12 @@
     <header>
         <div class="container">
             <div class="navbar">
-                <a href="index.html" class="logo">
+               <a href="{{ url_for('index') }}">Home</a> <a href="index.html" class="logo">
                     <span class="logo-icon">📄</span>
                     <span>PDFy</span>
                 </a>
                 <div class="nav-links">
-                    <a href="index.html">Home</a>
+                 <a href="{{ url_for('index') }}">Home</a>   <a href="index.html">Home</a>
                     <a href="#story">Our Story</a>
                     <a href="#values">Our Values</a>
                     <a href="#achievements">Achievements</a>
