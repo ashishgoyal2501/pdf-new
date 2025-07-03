@@ -82,11 +82,6 @@ def compress_with_pymupdf(input_path, output_path):
     doc.close()
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
 @app.route('/api/upload', methods=['POST'])
 def upload_file():
     cleanup_all()
