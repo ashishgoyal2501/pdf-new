@@ -395,25 +395,21 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                       <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="help.html">Help Center</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </div>
+    <h3>Company</h3>
+    <ul class="footer-links">
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+        <li><a href="{{ url_for('terms') }}">Terms of Service</a></li>
+    </ul>
+</div>
+<div class="footer-col">
+    <h3>Support</h3>
+    <ul class="footer-links">
+        <li><a href="{{ url_for('help_page') }}">Help Center</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+    </ul>
+</div>
             </div>
             
             <div class="copyright">
