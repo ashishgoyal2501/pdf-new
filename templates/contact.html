@@ -503,15 +503,18 @@
     <header>
         <div class="container">
             <div class="navbar">
-                <a href="index.html" class="logo">
+                <a href="{{ url_for('index') }}" class="logo">
                     <span class="logo-icon">📄</span>
                     <span>PDFy</span>
                 </a>
                 <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#faq">FAQ</a>
+                    <a href="{{ url_for('index') }}">Home</a>
+                    <a href="{{ url_for('about') }}">About</a>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                    <a href="{{ url_for('faq') }}">faq</a>
+
+            
+                
                 </div>
                 <div>
                     <a href="index.html" class="btn btn-primary">Get Started</a>
