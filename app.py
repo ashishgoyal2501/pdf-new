@@ -317,10 +317,6 @@ def download_file(filename):
     return send_from_directory(app.config['PROCESSED_FOLDER'], filename, as_attachment=True)
 
 
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
 @app.route('/')
 def index():
     return render_template('index.html')
